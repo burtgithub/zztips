@@ -53,7 +53,9 @@ function push($msg,$key){
 
     foreach($key AS $k){
 
-        $url    =   "https://api.day.app/{$k}/转债提醒/".$msg;
+        $day    =   date("Y-m-d");
+
+        $url    =   "https://api.day.app/{$k}/转债提醒{$day}/".$msg;
 
         curl($url);
 
